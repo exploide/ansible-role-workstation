@@ -7,3 +7,11 @@
     dest: "/home/{{ workstation_user }}/.gitconfig"
     mode: 0644
   tags: git
+
+- name: Ensure base directory for repository collection exists
+  become: no
+  file:
+    path: "{{ workstation_git_collection_dir }}"
+    state: directory
+    mode: 0755
+  tags: git

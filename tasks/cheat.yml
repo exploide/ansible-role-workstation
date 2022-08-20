@@ -1,0 +1,25 @@
+---
+
+- name: Clone personal cheatsheets repository
+  become: no
+  git:
+    repo: "{{ 'git@github.com:exploide/cheatsheets.git' if workstation_git_via_ssh else 'https://github.com/exploide/cheatsheets.git' }}"
+    dest: "{{ workstation_cheat_cheatsheets_dir }}"
+    accept_newhostkey: yes
+  tags: cheat
+
+- name: Ensure cheat config directory exists
+  become: no
+  file:
+    path: "{{ workstation_cheat_config_dir }}"
+    state: directory
+    mode: 0755
+  tags: cheat
+
+- name: Install cheat config file
+  become: no
+  template:
+    src: cheat/conf.yml
+    dest: "{{ workstation_cheat_config_dir }}/conf.yml"
+    mode: 0644
+  tags: cheat

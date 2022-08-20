@@ -1,0 +1,12 @@
+---
+# {{ ansible_managed }}
+
+colorize: true
+style: monokai
+formatter: terminal16m
+
+cheatpaths:
+  - name: personal
+    path: "{{ workstation_cheat_cheatsheets_dir }}"
+    tags: []
+    readonly: false

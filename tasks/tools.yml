@@ -5,6 +5,8 @@
   package:
     name:
       - bat
+      - cheat
+      - cheat-fish-completion
       - fd-find
       - fish
       - fzf
