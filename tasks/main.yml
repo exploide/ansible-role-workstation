@@ -5,3 +5,4 @@
 - import_tasks: fish.yml
 - import_tasks: git.yml
 - import_tasks: cheat.yml
+- import_tasks: up.yml

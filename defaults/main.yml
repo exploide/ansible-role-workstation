@@ -4,3 +4,5 @@ workstation_user: "{{ ansible_user }}"
 
 workstation_cheat_cheatsheets_dir: "{{ workstation_git_collection_dir }}/cheatsheets"
 workstation_cheat_config_dir: "/home/{{ workstation_user }}/.config/cheat"
+
+workstation_up_repo_dir: "{{ workstation_git_collection_dir }}/up"
