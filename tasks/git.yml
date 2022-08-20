@@ -1,0 +1,9 @@
+---
+
+- name: Install .gitconfig file
+  become: no
+  copy:
+    src: git/gitconfig
+    dest: "/home/{{ workstation_user }}/.gitconfig"
+    mode: 0644
+  tags: git

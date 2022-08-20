@@ -1,0 +1,24 @@
+[help]
+	autocorrect = -1
+
+[user]
+	useConfigOnly = true
+
+[core]
+	excludesfile = ~/.gitignore
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[init]
+	defaultBranch = main
+
+[diff]
+	colorMoved = default
+
+[push]
+	autoSetupRemote = true
+
+[pull]
+	rebase = false
