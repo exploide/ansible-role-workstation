@@ -1,0 +1,7 @@
+LC_TIME=de_DE.utf8
+
+EDITOR=micro
+VISUAL=micro
+
+MANPAGER="sh -c 'col -bx | bat -l man -p'"
+MANROFFOPT="-c"

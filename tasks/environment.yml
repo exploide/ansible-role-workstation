@@ -1,0 +1,9 @@
+---
+
+- name: Install environment file with system-wide variables
+  become: yes
+  copy:
+    src: environment/environment
+    dest: /etc/environment
+    mode: 0644
+  tags: environment

@@ -2,3 +2,4 @@
 
 - import_tasks: tools.yml
 - import_tasks: fish.yml
+- import_tasks: environment.yml
