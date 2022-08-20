@@ -1,3 +1,5 @@
+# {{ ansible_managed }}
+
 LC_TIME=de_DE.utf8
 
 EDITOR=micro

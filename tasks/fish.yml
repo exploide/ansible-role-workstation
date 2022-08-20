@@ -12,7 +12,7 @@
 
 - name: Disable fish greeting
   become: yes
-  copy:
+  template:
     src: fish/disable_greeting.fish
     dest: /etc/fish/conf.d/disable_greeting.fish
     mode: 0644
@@ -20,7 +20,7 @@
 
 - name: Install ip function for colored output
   become: yes
-  copy:
+  template:
     src: fish/ip.fish
     dest: /etc/fish/functions/ip.fish
     mode: 0644
@@ -28,7 +28,7 @@
 
 - name: Enable fzf key bindings
   become: yes
-  copy:
+  template:
     src: fish/enable_fzf_key_bindings.fish
     dest: /etc/fish/conf.d/enable_fzf_key_bindings.fish
     mode: 0644

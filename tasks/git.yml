@@ -2,7 +2,7 @@
 
 - name: Install .gitconfig file
   become: no
-  copy:
+  template:
     src: git/gitconfig
     dest: "/home/{{ workstation_user }}/.gitconfig"
     mode: 0644
