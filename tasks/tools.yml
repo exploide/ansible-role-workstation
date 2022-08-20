@@ -1,0 +1,17 @@
+---
+
+- name: Install useful tools
+  become: yes
+  package:
+    name:
+      - bat
+      - fd-find
+      - fish
+      - fzf
+      - git-delta
+      - hexyl
+      - htop
+      - micro
+      - ripgrep
+    state: present
+  tags: tools
