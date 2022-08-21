@@ -5,6 +5,12 @@
 
 [user]
 	useConfigOnly = true
+{% if workstation_git_user_name is defined %}
+	name = {{ workstation_git_user_name }}
+{% endif %}
+{% if workstation_git_user_email is defined %}
+	email = {{ workstation_git_user_email }}
+{% endif %}
 
 [core]
 	excludesfile = ~/.gitignore
@@ -15,6 +21,13 @@
 
 [init]
 	defaultBranch = main
+
+[commit]
+{% if workstation_git_commit_gpgsign %}
+	gpgsign = true
+{% else %}
+	gpgsign = false
+{% endif %}
 
 [diff]
 	colorMoved = default

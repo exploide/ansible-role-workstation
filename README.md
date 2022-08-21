@@ -12,4 +12,15 @@ On the other hand, it contains much less, because I like software that comes wit
 workstation_git_collection_dir: "/home/{{ workstation_user }}/repos"
 # whether to perform git operations via ssh or not
 workstation_git_via_ssh: yes
+# whether to sign commits with GPG or not
+workstation_git_commit_gpgsign: no
+```
+
+## Optional variables
+
+```yaml
+# default user name for git config
+workstation_git_user_name: user
+# default user email for git config
+workstation_git_user_email: me@example.org
 ```
