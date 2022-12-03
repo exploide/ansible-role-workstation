@@ -1,8 +1,8 @@
 ---
 
 - name: Install useful tools
-  become: yes
-  package:
+  become: true
+  ansible.builtin.package:
     name:
       - bat
       - cheat

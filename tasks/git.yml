@@ -1,16 +1,16 @@
 ---
 
 - name: Install .gitconfig file
-  become: no
-  template:
+  become: false
+  ansible.builtin.template:
     src: git/gitconfig
     dest: "/home/{{ workstation_user }}/.gitconfig"
     mode: 0644
   tags: git
 
 - name: Ensure base directory for repository collection exists
-  become: no
-  file:
+  become: false
+  ansible.builtin.file:
     path: "{{ workstation_git_collection_dir }}"
     state: directory
     mode: 0755

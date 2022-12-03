@@ -1,8 +1,8 @@
 ---
 
 - name: Install environment file with system-wide variables
-  become: yes
-  template:
+  become: true
+  ansible.builtin.template:
     src: environment/environment
     dest: /etc/environment
     mode: 0644
