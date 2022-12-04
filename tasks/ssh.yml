@@ -1,0 +1,9 @@
+---
+
+- name: Install sshd config file
+  become: true
+  ansible.builtin.template:
+    src: ssh/10-custom.conf
+    dest: /etc/ssh/sshd_config.d/10-custom.conf
+    mode: 0600
+  tags: ssh
