@@ -1,9 +1,22 @@
 ---
 
-- import_tasks: ssh.yml
-- import_tasks: tools.yml
-- import_tasks: environment.yml
-- import_tasks: fish.yml
-- import_tasks: git.yml
-- import_tasks: cheat.yml
-- import_tasks: up.yml
+- name: Setup sshd config
+  ansible.builtin.import_tasks: ssh.yml
+
+- name: Install useful tools
+  ansible.builtin.import_tasks: tools.yml
+
+- name: Setup global environment variables
+  ansible.builtin.import_tasks: environment.yml
+
+- name: Setup fish shell
+  ansible.builtin.import_tasks: fish.yml
+
+- name: Setup git
+  ansible.builtin.import_tasks: git.yml
+
+- name: Setup cheat and cheatsheets
+  ansible.builtin.import_tasks: cheat.yml
+
+- name: Install updating utility
+  ansible.builtin.import_tasks: up.yml
