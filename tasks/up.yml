@@ -3,7 +3,8 @@
 - name: Clone updating utility
   become: false
   ansible.builtin.git:
-    repo: "{{ 'git@gist.github.com:873a32a8b1817a4f9d4da103a964c115.git' if workstation_git_via_ssh else 'https://gist.github.com/873a32a8b1817a4f9d4da103a964c115.git' }}"
+    repo: "{{ 'git@gist.github.com:873a32a8b1817a4f9d4da103a964c115.git' if workstation_git_via_ssh \
+          else 'https://gist.github.com/873a32a8b1817a4f9d4da103a964c115.git' }}"
     dest: "{{ workstation_up_repo_dir }}"
     accept_newhostkey: true
   tags: up
