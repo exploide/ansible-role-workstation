@@ -26,11 +26,11 @@
     mode: 0755
   tags: fish
 
-- name: Add config to prepend ~/.local/bin to PATH
+- name: Extend PATH variable
   become: true
   ansible.builtin.template:
-    src: fish/add_local_path.fish
-    dest: /etc/fish/conf.d/add_local_path.fish
+    src: fish/extend_path.fish
+    dest: /etc/fish/conf.d/extend_path.fish
     mode: 0644
   tags: fish
 
