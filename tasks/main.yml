@@ -3,6 +3,9 @@
 - name: Setup sshd config
   ansible.builtin.import_tasks: ssh.yml
 
+- name: Setup sysctl config
+  ansible.builtin.import_tasks: sysctl.yml
+
 - name: Install useful tools
   ansible.builtin.import_tasks: tools.yml
 
