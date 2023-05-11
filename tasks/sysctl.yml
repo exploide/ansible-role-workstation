@@ -5,5 +5,5 @@
   ansible.builtin.template:
     src: sysctl/custom.conf
     dest: /etc/sysctl.d/custom.conf
-    mode: 0644
+    mode: "0644"
   tags: sysctl

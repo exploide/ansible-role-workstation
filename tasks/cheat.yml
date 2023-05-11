@@ -13,7 +13,7 @@
   ansible.builtin.file:
     path: "{{ workstation_cheat_config_dir }}"
     state: directory
-    mode: 0755
+    mode: "0755"
   tags: cheat
 
 - name: Install cheat config file
@@ -21,5 +21,5 @@
   ansible.builtin.template:
     src: cheat/conf.yml
     dest: "{{ workstation_cheat_config_dir }}/conf.yml"
-    mode: 0644
+    mode: "0644"
   tags: cheat

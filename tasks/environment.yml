@@ -5,5 +5,5 @@
   ansible.builtin.template:
     src: environment/environment
     dest: /etc/environment
-    mode: 0644
+    mode: "0644"
   tags: environment
