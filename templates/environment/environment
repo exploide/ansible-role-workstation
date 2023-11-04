@@ -5,3 +5,5 @@ VISUAL=micro
 
 MANPAGER="sh -c 'col -bx | bat -l man -p'"
 MANROFFOPT="-c"
+
+CLICOLOR=1
