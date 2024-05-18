@@ -34,14 +34,6 @@
     mode: "0644"
   tags: fish
 
-- name: Install ip function for colored output
-  become: true
-  ansible.builtin.template:
-    src: fish/ip.fish
-    dest: /etc/fish/functions/ip.fish
-    mode: "0644"
-  tags: fish
-
 - name: Enable fzf key bindings
   become: true
   ansible.builtin.template:
